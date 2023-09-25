@@ -147,7 +147,8 @@ class StackedListController<T> {
   bool _timerUnlocked = true;
 
   void startTransitionLoop() {
-    if (carouselBehavior == CarouselBehavior.loop) {
+    if (carouselBehavior == CarouselBehavior.loop &&
+        autoSlideDuration != Duration.zero) {
       _startTimer();
     }
   }
